@@ -1,0 +1,21 @@
+[package]
+name = "rubik2x2"
+version = "0.1.0"
+authors = ["Anders Leino <anders.leino@gmail.com>"]
+
+[dependencies]
+winapi = "0.3.4"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["consoleapi",
+                                        "errhandlingapi",
+                                        "handleapi",
+                                        "processenv",
+                                        "synchapi",
+                                        "winbase",
+                                        "winerror",
+                                        "winuser"]}
+
+[[bin]]
+name = "rubik2x2"
+path = "src/main.rs"
